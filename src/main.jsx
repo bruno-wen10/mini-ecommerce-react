@@ -8,13 +8,16 @@ import { Home } from "./routes/Home.jsx";
 import { Produtos } from "./routes/Produtos.jsx";
 import { Erro } from "./routes/Erro.jsx";
 import { Sobre } from "./routes/Sobre.jsx";
+import { Login } from "./routes/Login.jsx";
 
+//Objeto de rotas
 const routes = (
   <Routes>
     <Route path="/" element={<App />} errorElement={<Erro/>}>
       <Route index element={<Home />} />
       <Route path="/Produtos" element={<Produtos />} />
       <Route path="/sobre" element={<Sobre/>}/>
+      <Route path="/login" element={<Login/>}/>
       <Route path="*" element={<Erro/>}/>
     </Route>
   </Routes>
