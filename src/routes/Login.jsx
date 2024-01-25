@@ -1,6 +1,7 @@
 import { useRef } from "react"
 import { Produtos } from "./Produtos"
 
+
 export const Login = ()=>{
     const user = useRef()
     const password = useRef()
@@ -13,8 +14,8 @@ export const Login = ()=>{
             //AUTENTICAÇÃO COM TOKEN
             let token = 
             Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
-            sessionStorage.setItem('userData', 'token')
-            sessionStorage.setItem('senhaData',  'token')
+            sessionStorage.setItem('userData', 'Admin')
+            sessionStorage.setItem('passwordData',  token)
         } else {
             alert('Usuário ou senha inválidos')
         }
@@ -24,11 +25,13 @@ export const Login = ()=>{
         <section>
             {/* if ternario */}
             {getUser && getPassword ? (
-                <Produtos/>
+               <Produtos/>
             ):(
                 <form onSubmit={handleSubmit}>
+
                     <label htmlFor="usuario">Usuario:</label>
                     <input type="text" ref={user} />
+
                     <label htmlFor="password">Senha:</label>
                     <input type="text" ref={password} />
 

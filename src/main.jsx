@@ -15,9 +15,9 @@ const routes = (
   <Routes>
     <Route path="/" element={<App />} errorElement={<Erro/>}>
       <Route index element={<Home />} />
-      <Route path="/Produtos" element={<Produtos />} />
-      <Route path="/sobre" element={<Sobre/>}/>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/produtos" element={<Produtos />} />
+      <Route path="/sobre" element={<Sobre/>}/>
       <Route path="*" element={<Erro/>}/>
     </Route>
   </Routes>
